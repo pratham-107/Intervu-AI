@@ -28,10 +28,10 @@ const POPULAR_ROLES = [
 ];
 
 const VOICE_OPTIONS = [
-  { id: 'indian-female', name: '🇮🇳 Indian Accent (Female - Priya / Neerja)', desc: 'Natural Indian English accent with clear articulation' },
-  { id: 'indian-male', name: '🇮🇳 Indian Accent (Male - Ravi / Prabhat)', desc: 'Natural Indian English accent with professional cadence' },
-  { id: 'aura-asteria-en', name: '🌐 Global Accent (Deepgram Asteria)', desc: 'Ultra-realistic neural studio voice' },
-  { id: 'aura-arcas-en', name: '🌐 Global Accent (Deepgram Arcas)', desc: 'Deep authoritative neural studio voice' }
+  { id: 'aura-arcas-en', name: '🎙️ Deepgram Arcas (Authoritative Neural Voice)', desc: 'Deep, crisp, professional studio voice with natural cadence' },
+  { id: 'aura-asteria-en', name: '🎙️ Deepgram Asteria (Conversational Neural Voice)', desc: 'Warm, clear, and engaging studio voice' },
+  { id: 'indian-female', name: '🇮🇳 Indian Accent (Female — Priya / Neerja)', desc: 'Natural Indian English accent with clear articulation' },
+  { id: 'indian-male', name: '🇮🇳 Indian Accent (Male — Ravi / Prabhat)', desc: 'Natural Indian English accent with professional tone' }
 ];
 
 function NewInterviewContent() {
@@ -40,7 +40,7 @@ function NewInterviewContent() {
 
   const [role, setRole] = useState('Frontend Developer');
   const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
-  const [selectedVoice, setSelectedVoice] = useState('indian-female');
+  const [selectedVoice, setSelectedVoice] = useState('aura-arcas-en');
   const [resumeText, setResumeText] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

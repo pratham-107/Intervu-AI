@@ -48,7 +48,7 @@ class FeedbackGenRequest(BaseModel):
 
 class TTSRequest(BaseModel):
     text: str
-    voice: Optional[str] = "aura-asteria-en" # e.g. aura-asteria-en, aura-arcas-en, aura-luna-en
+    voice: Optional[str] = "aura-arcas-en" # Deep authoritative neural voice
 
 @app.get("/health")
 async def health():
@@ -89,7 +89,7 @@ async def text_to_speech_endpoint(req: TTSRequest):
     if not DEEPGRAM_API_KEY:
         raise HTTPException(status_code=500, detail="Deepgram API key not configured")
     
-    url = f"https://api.deepgram.com/v1/speak?model={req.voice or 'aura-asteria-en'}"
+    url = f"https://api.deepgram.com/v1/speak?model={req.voice or 'aura-arcas-en'}"
     headers = {
         "Authorization": f"Token {DEEPGRAM_API_KEY}",
         "Content-Type": "application/json"
